@@ -1,4 +1,3 @@
 /.vscode
-/be chuot.txt
-/ins.txt
-/mahoa.exe
+*.exe
+*.txt
