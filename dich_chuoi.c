@@ -57,7 +57,7 @@ void dichso_chuoi(char *word, char *output_str, int *cur_out_len, int max_len){
                 temp[offset++] = '.';
                 da_in_dau_cham=1;
             }
-            temp[offset++] = (char)(index + '0');
+            offset += sprintf(temp + offset, "%d", index);
             temp[offset] = '\0';
             if(*cur_out_len + strlen(temp) < max_len){
                 strcat(output_str+*cur_out_len, temp);
