@@ -60,7 +60,7 @@ void meowkitu_file(char *input_str, char *file_path, int i, int *cur_out_len,int
     for (int k = 0; k <= e_add; k++) temp[offset++] = 'e';
     for (int k = 0; k <= o_add; k++) temp[offset++] = 'o';
     for (int k = 0; k <= w_add; k++) temp[offset++] = 'w';
-    temp[offset++] = '~';
+    temp[offset++] = ' ';
     temp[offset] = '\0';
     FILE *fWrite = fopen(file_path, "a");
     fprintf(fWrite, "%s", temp);
