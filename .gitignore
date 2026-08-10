@@ -1,3 +1,11 @@
 /.vscode
 *.exe
 *.txt
+*.spec
+*.gitignore
+*.pyc
+*.html
+*.pyz
+*.toc
+*.zip
+*.pkg
