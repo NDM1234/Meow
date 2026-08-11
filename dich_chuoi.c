@@ -44,7 +44,6 @@ void dichso_chuoi(char *word, char *output_str, int *cur_out_len, int max_len){
             int offset=0;
             if(so[0]=='M'&& so_dau==1){
                 temp[offset++] = '-';
-                temp[offset] = '\0';
             }
             int so_thuc = (so[0] == 'M' && so_dau == 0 && da_in_dau_cham == 0) ? 1 : 0;
             int e=0,o=0,w=0;

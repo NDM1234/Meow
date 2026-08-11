@@ -4,7 +4,7 @@
 #include "mahoa.h"
 #define Alphabet_len 33
 char first='m';
-const char ALPHABET[] = "abcdefghijklmnopqrstuvwxyz !?,.*";
+const char ALPHABET[] = " abcdefghijklmnopqrstuvwxyz!?,.*";
 
 int meowso_chuoi(char *input_str, char *output_str, int i, int *cur_out_len, int max_len){
     char so[3]={0};
@@ -78,9 +78,10 @@ void meow_chuoi(char *input_str, char *output_str, int max_len) {
             }
             //xử lí kí tự
             if((input_str[i]>='a' && input_str[i]<='z')||(input_str[i]>='A' && input_str[i]<='Z')||input_str[i]==' ' || input_str[i]=='!' || input_str[i]==',' || input_str[i]=='.' || input_str[i]=='?' || input_str[i]=='*'){
+                if(out_len > 0 && output_str[out_len-1] != ' ') {
+                    output_str[out_len++] = ' ';
+                }
                 meowkitu_chuoi(input_str,output_str,i,&out_len,max_len);
             }
         }
-        printf("\n");
-        printf("Da ma hoa.\n");
 }

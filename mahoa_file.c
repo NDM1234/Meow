@@ -96,8 +96,10 @@ void meow_file(char *file_path, char *output_str, int max_len) {
                 i=meowso_file(content, out_file_path, i, &out_len, max_len);
             }
             if(content[i]>='a' && content[i]<='z' || content[i]>='A' && content[i]<='Z' || content[i]==' ' || content[i]=='!' || content[i]==',' || content[i]=='.' || content[i]=='?' || content[i]=='*'){
+                if(out_len > 0 && output_str[out_len-1] != ' ') {
+                    output_str[out_len++] = ' ';
+                }
                 meowkitu_file(content, out_file_path, i, &out_len, max_len);
             }
         }      
-        printf("Da ma hoa va luu vao file %s\n", file_path);
 }
